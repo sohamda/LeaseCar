@@ -1,0 +1,52 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="LeaseCar" className="oracle.adf.model.connection.adfmf.LoginConnection"
+             adfCredentialStoreKey="LeaseCar" partial="false" manageInOracleEnterpriseManager="true" deployable="true"
+             xmlns="">
+    <Factory className="oracle.adf.model.connection.adfmf.LoginConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="adfmfLogin">
+        <Contents>
+          <login url="https://mobileportalsetrial1304dev-mcsdem0001.mobileenv.us2.oraclecloud.com:443/mobile/platform/users/login"/>
+          <logout url="https://mobileportalsetrial1304dev-mcsdem0001.mobileenv.us2.oraclecloud.com:443/mobile/platform/users/login"/>
+          <customAuthHeaders>
+            <header name="Authorization"
+                    value="Basic TUNTREVNMDAwMV9NT0JJTEVQT1JUQUxTRVRSSUFMMTMwNERFVl9NT0JJTEVfQU5PTllNT1VTX0FQUElEOmR5Nm91NW5wX3RnbE5r"/>
+            <header name="oracle-mobile-backend-id" value="aeb90251-2e2b-45cd-b981-cb46b8714411"/>
+          </customAuthHeaders>
+          <authenticationMode value="remote"/>
+          <idleTimeout value="300"/>
+          <sessionTimeout value="28800"/>
+          <maxFailuresBeforeCredentialCleared value="3"/>
+          <rememberCredentials>
+            <enableRememberUserName value="true"/>
+            <rememberUserNameDefault value="true"/>
+            <enableRememberPassword value="false"/>
+            <enableStayLoggedIn value="false"/>
+          </rememberCredentials>
+          <accessControl/>
+          <userObjectFilter/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="SyncService_base_connection" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="SyncService_base_connection">
+        <Contents>
+          <urlconnection name="SyncService_base_connection" url="http://127.0.0.1"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="EdmundAPI" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="EdmundAPI">
+        <Contents>
+          <restconnection name="EdmundAPI" url="http://api.edmunds.com/api/vehicle/v2"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.2.1" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/carfinder/pages/listMakes.amx" usageId="mobile_listMakesPageDef"/>
+    <page path="/carfinder/pages/listModels.amx" usageId="mobile_listModelsPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_listMakesPageDef" path="carfinder.pages.listMakesPageDef"/>
+    <page id="mobile_listModelsPageDef" path="carfinder.pages.listModelsPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="CarApiDataControl" path="application.CarApiDataControl"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">listMakes</property>
+      <property
+         name="page">/carfinder/pages/listMakes.amx</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>listMakes&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">161.94824</property>
+      <property
+         name="x">115.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">listModels</property>
+      <property
+         name="page">/carfinder/pages/listModels.amx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>listModels&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">160.89648</property>
+      <property
+         name="x">348.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">showModels</property>
+      <property
+         name="sdm:polyPoints">R50,156.0,161.59766,307.0,160.5459,L50</property>
+   </ControlFlowCase>
+</SDM>
