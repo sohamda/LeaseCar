@@ -25,22 +25,22 @@ import oracle.adfmf.util.logging.Trace;
 
 public class CarApiDataControl {
     
-    List<Make> makes = new ArrayList<>();
+    Make[] makes;// = new ArrayList<>();
     private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
     protected ProviderChangeSupport providerChangeSupport = new ProviderChangeSupport(this);
 
-    public void setMakes(List<Make> makes) {
-        List<Make> oldMakes = this.makes;
+    public void setMakes(Make[] makes) {
+        Make[] oldMakes = this.makes;
         this.makes = makes;
         propertyChangeSupport.firePropertyChange("makes", oldMakes, makes);
     }
 
-    public List<Make> getMakes() {
-        if(makes.isEmpty()) {
+    public Make[] getMakes() {
+        if(makes==null) {
             System.out.println("makes are empty ");
             allMakes();
         }
-        System.out.println("return makes "+makes.get(1).getName());
+        System.out.println("return makes "+makes[1].getName());
         return makes;
     }
 
@@ -63,14 +63,14 @@ public class CarApiDataControl {
         }
         
         if(makeAPIResponse != null) {
-            System.out.println("makeAPIResponse is not null "+makeAPIResponse.getMakes().size());
+            System.out.println("makeAPIResponse is not null "+ makeAPIResponse.getMakes());
             setMakes(makeAPIResponse.getMakes());
         }
         providerChangeSupport.fireProviderRefresh("makes");
     }
     
     // get the details of all the models inside a make
-    public List<Model> getModels(Make make) {
+    public Model[] getModels(Make make) {
         
         return make.getModels();
     }

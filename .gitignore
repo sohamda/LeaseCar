@@ -13,6 +13,7 @@ ApplicationController/deploy/
 common/classes/
 ViewController/classes/
 ViewController/deploy/
+.data/
 *.tmp
 *.bak
 *.swp

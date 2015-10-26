@@ -8,7 +8,7 @@ public class Year {
 
     private Integer id;
     private Integer year;
-    private List<String> states = new ArrayList<String>();
+    private String[] states;// = new ArrayList<String>();
 
     /**
      * 
@@ -51,7 +51,7 @@ public class Year {
      * @return
      *     The states
      */
-    public List<String> getStates() {
+    public String[] getStates() {
         return states;
     }
 
@@ -60,7 +60,7 @@ public class Year {
      * @param states
      *     The states
      */
-    public void setStates(List<String> states) {
+    public void setStates(String[] states) {
         this.states = states;
     }
 

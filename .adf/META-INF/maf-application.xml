@@ -3,6 +3,7 @@
                    version="1.0" name="LeaseCar" id="com.company.LeaseCar" appControllerFolder="ApplicationController"
                    listener-class="application.LifeCycleListenerImpl">
   <adfmf:featureReference refId="carfinder" id="fr1" showOnSpringboard="false" showOnNavigationBar="false"/>
+  <adfmf:featureReference refId="help" id="fr2"/>
   <adfmf:preferences/>
   <adfmf:navigation>
     <adfmf:navigationBar enabled="false"/>

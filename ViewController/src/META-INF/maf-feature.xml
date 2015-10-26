@@ -5,4 +5,9 @@
       <adfmf:amx file="carfinder/carfinder-task-flow.xml#carfinder-task-flow"/>
     </adfmf:content>
   </adfmf:feature>
+  <adfmf:feature id="help" name="help">
+    <adfmf:content id="help.1">
+      <adfmf:localHTML url="help/help.html"/>
+    </adfmf:content>
+  </adfmf:feature>
 </adfmf:features>

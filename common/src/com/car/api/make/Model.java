@@ -9,8 +9,8 @@ public class Model {
     private String id;
     private String name;
     private String niceName;
-    private List<Year> years = new ArrayList<Year>();
-    private List<String> states = new ArrayList<String>();
+    private Year[] years;// = new ArrayList<Year>();
+    private String[] states;// = new ArrayList<String>();
 
     /**
      * 
@@ -71,7 +71,7 @@ public class Model {
      * @return
      *     The years
      */
-    public List<Year> getYears() {
+    public Year[] getYears() {
         return years;
     }
 
@@ -80,7 +80,7 @@ public class Model {
      * @param years
      *     The years
      */
-    public void setYears(List<Year> years) {
+    public void setYears(Year[] years) {
         this.years = years;
     }
 
@@ -89,7 +89,7 @@ public class Model {
      * @return
      *     The states
      */
-    public List<String> getStates() {
+    public String[] getStates() {
         return states;
     }
 
@@ -98,7 +98,7 @@ public class Model {
      * @param states
      *     The states
      */
-    public void setStates(List<String> states) {
+    public void setStates(String[] states) {
         this.states = states;
     }
 

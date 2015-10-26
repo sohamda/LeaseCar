@@ -5,10 +5,15 @@
     <amx:facet name="header">
       <amx:outputText value="List" id="ot1"/>
     </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton text="Need Help ?" id="cb1"/>
+    </amx:facet>
     <amx:listView var="row" value="#{bindings.makes.collectionModel}" fetchSize="#{bindings.makes.rangeSize}"
-                 styleClass="adfmf-listView-insetList" showMoreStrategy="autoScroll"
-                  bufferStrategy="viewport" id="lv1">
-      <amx:listItem id="li1" action="showModels">
+                  selectedRowKeys="#{bindings.makes.collectionModel.selectedRow}"
+                  initialScrollRowKeys="#{bindings.makes.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.makes.collectionModel.makeCurrent}" dividerAttribute="name"
+                  dividerMode="all" showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
+      <amx:listItem id="li1">
         <amx:outputText value="#{row.name}" id="ot2"/>
       </amx:listItem>
     </amx:listView>

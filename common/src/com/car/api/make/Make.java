@@ -9,7 +9,7 @@ public class Make {
     private Integer id;
     private String name;
     private String niceName;
-    private List<Model> models = new ArrayList<Model>();
+    private Model[] models;// = new ArrayList<Model>();
 
     /**
      * 
@@ -70,7 +70,7 @@ public class Make {
      * @return
      *     The models
      */
-    public List<Model> getModels() {
+    public Model[] getModels() {
         return models;
     }
 
@@ -79,7 +79,7 @@ public class Make {
      * @param models
      *     The models
      */
-    public void setModels(List<Model> models) {
+    public void setModels(Model[] models) {
         this.models = models;
     }
 

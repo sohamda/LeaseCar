@@ -10,7 +10,7 @@
   </executables>
   <bindings>
     <tree IterBinding="makesIterator" id="makes">
-      <nodeDefinition DefName="com.car.api.make.Make" Name="makes10">
+      <nodeDefinition DefName="com.car.api.make.Make" Name="makes0">
         <AttrNames>
           <Item Value="name"/>
         </AttrNames>
