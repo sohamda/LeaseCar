@@ -8,7 +8,7 @@
     <accessorIterator MasterBinding="CarApiDataControlIterator" Binds="styles" RangeSize="25"
                       DataControl="CarApiDataControl" BeanClass="com.car.api.style.Style" id="stylesIterator"/>
     <accessorIterator MasterBinding="stylesIterator" Binds="price" RangeSize="25" DataControl="CarApiDataControl"
-                      BeanClass="com.car.api.style.Price_" id="priceIterator"/>
+                      BeanClass="com.car.api.style.Price__" id="priceIterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="priceIterator" id="baseMSRP">
@@ -24,6 +24,21 @@
     <attributeValues IterBinding="priceIterator" id="deliveryCharges">
       <AttrNames>
         <Item Value="deliveryCharges"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="usedTmvRetail">
+      <AttrNames>
+        <Item Value="usedTmvRetail"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="usedPrivateParty">
+      <AttrNames>
+        <Item Value="usedPrivateParty"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="usedTradeIn">
+      <AttrNames>
+        <Item Value="usedTradeIn"/>
       </AttrNames>
     </attributeValues>
     <attributeValues IterBinding="priceIterator" id="estimateTmv">

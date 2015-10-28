@@ -3,30 +3,45 @@
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
   <amx:panelPage id="pp1">
     <amx:facet name="header">
-      <amx:outputText value="Header" id="ot1"/>
+      <amx:outputText value="#{bindings.stylesIterator.currentRow.dataProvider.name}" id="ot1"/>
     </amx:facet>
     <amx:panelFormLayout id="pfl1">
-      <amx:panelLabelAndMessage label="#{bindings.baseMSRP.hints.label}" id="plam1">
-        <amx:outputText value="#{pageFlowScope.selectedStyle.price.baseMSRP}" id="ot2">
-          <amx:convertNumber groupingUsed="false" id="cn1"/>
+      <amx:panelLabelAndMessage label="#{bindings.baseMSRP.hints.label}" id="plam6">
+        <amx:outputText value="#{bindings.baseMSRP.inputValue}" id="ot7">
+          <amx:convertNumber groupingUsed="false" id="cn5"/>
         </amx:outputText>
       </amx:panelLabelAndMessage>
-      <amx:panelLabelAndMessage label="#{bindings.baseInvoice.hints.label}" id="plam5">
-        <amx:outputText value="#{pageFlowScope.selectedStyle.price.baseInvoice}" id="ot6">
-          <amx:convertNumber groupingUsed="false" id="cn4"/>
+      <amx:panelLabelAndMessage label="#{bindings.baseInvoice.hints.label}" id="plam7">
+        <amx:outputText value="#{bindings.baseInvoice.inputValue}" id="ot8">
+          <amx:convertNumber groupingUsed="false" id="cn6"/>
         </amx:outputText>
       </amx:panelLabelAndMessage>
       <amx:panelLabelAndMessage label="#{bindings.deliveryCharges.hints.label}" id="plam3">
-        <amx:outputText value="#{pageFlowScope.selectedStyle.price.deliveryCharges}" id="ot4">
+        <amx:outputText value="#{bindings.deliveryCharges.inputValue}" id="ot4">
+          <amx:convertNumber groupingUsed="false" id="cn2"/>
+        </amx:outputText>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.usedTmvRetail.hints.label}" id="plam8">
+        <amx:outputText value="#{bindings.usedTmvRetail.inputValue}" id="ot9">
+          <amx:convertNumber groupingUsed="false" id="cn7"/>
+        </amx:outputText>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.usedPrivateParty.hints.label}" id="plam4">
+        <amx:outputText value="#{bindings.usedPrivateParty.inputValue}" id="ot5">
           <amx:convertNumber groupingUsed="false" id="cn3"/>
         </amx:outputText>
       </amx:panelLabelAndMessage>
-      <amx:panelLabelAndMessage label="#{bindings.estimateTmv.hints.label}" id="plam4">
-        <amx:outputText value="#{pageFlowScope.selectedStyle.price.estimateTmv}" id="ot5"/>
+      <amx:panelLabelAndMessage label="#{bindings.usedTradeIn.hints.label}" id="plam5">
+        <amx:outputText value="#{bindings.usedTradeIn.inputValue}" id="ot6">
+          <amx:convertNumber groupingUsed="false" id="cn4"/>
+        </amx:outputText>
+      </amx:panelLabelAndMessage>
+      <amx:panelLabelAndMessage label="#{bindings.estimateTmv.hints.label}" id="plam1">
+        <amx:outputText value="#{bindings.estimateTmv.inputValue}" id="ot2"/>
       </amx:panelLabelAndMessage>
       <amx:panelLabelAndMessage label="#{bindings.tmvRecommendedRating.hints.label}" id="plam2">
-        <amx:outputText value="#{pageFlowScope.selectedStyle.price.tmvRecommendedRating}" id="ot3">
-          <amx:convertNumber groupingUsed="false" id="cn2"/>
+        <amx:outputText value="#{bindings.tmvRecommendedRating.inputValue}" id="ot3">
+          <amx:convertNumber groupingUsed="false" id="cn1"/>
         </amx:outputText>
       </amx:panelLabelAndMessage>
     </amx:panelFormLayout>
