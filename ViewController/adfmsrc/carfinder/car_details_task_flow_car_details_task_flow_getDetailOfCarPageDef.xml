@@ -3,7 +3,9 @@
                 id="car_details_task_flow_car_details_task_flow_getDetailOfCarPageDef" Package="carfinder"
                 SkipValidation="true">
   <parameters/>
-  <executables/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
   <bindings>
     <methodAction id="getDetailOfCar" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getDetailOfCar"
                   IsViewObjectMethod="false" DataControl="CarApiDataControl"
