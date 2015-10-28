@@ -9,8 +9,8 @@ public class Model {
     private String id;
     private String name;
     private String niceName;
-    private Year[] years;// = new ArrayList<Year>();
-    private String[] states;// = new ArrayList<String>();
+    private Year[] years;
+    private String[] states;
 
     /**
      * 

@@ -1,11 +1,7 @@
 
 package com.car.api.style;
 
-import java.util.ArrayList;
-import java.util.List;
- 
 
- 
 public class Style {
 
     private Make make;
@@ -14,17 +10,19 @@ public class Style {
     private Transmission transmission;
     private String drivenWheels;
     private String numOfDoors;
-    private List<Option> options = new ArrayList<Option>();
-    private List<Object> colors = new ArrayList<Object>();
-    private Price_ price;
+    private Option[] options;
+    private Color[] colors;
+    private String manufacturerCode;
+    private Price__ price;
     private Categories categories;
     private Integer id;
     private String name;
     private Year year;
     private Submodel submodel;
     private String trim;
-    private List<String> states = new ArrayList<String>();
-    private List<String> squishVins = new ArrayList<String>();
+    private String[] states;
+    private String[] squishVins;
+    private MPG MPG;
 
     /**
      * 
@@ -139,7 +137,7 @@ public class Style {
      * @return
      *     The options
      */
-    public List<Option> getOptions() {
+    public Option[] getOptions() {
         return options;
     }
 
@@ -148,7 +146,7 @@ public class Style {
      * @param options
      *     The options
      */
-    public void setOptions(List<Option> options) {
+    public void setOptions(Option[] options) {
         this.options = options;
     }
 
@@ -157,7 +155,7 @@ public class Style {
      * @return
      *     The colors
      */
-    public List<Object> getColors() {
+    public Color[] getColors() {
         return colors;
     }
 
@@ -166,8 +164,26 @@ public class Style {
      * @param colors
      *     The colors
      */
-    public void setColors(List<Object> colors) {
+    public void setColors(Color[] colors) {
         this.colors = colors;
+    }
+
+    /**
+     * 
+     * @return
+     *     The manufacturerCode
+     */
+    public String getManufacturerCode() {
+        return manufacturerCode;
+    }
+
+    /**
+     * 
+     * @param manufacturerCode
+     *     The manufacturerCode
+     */
+    public void setManufacturerCode(String manufacturerCode) {
+        this.manufacturerCode = manufacturerCode;
     }
 
     /**
@@ -175,7 +191,7 @@ public class Style {
      * @return
      *     The price
      */
-    public Price_ getPrice() {
+    public Price__ getPrice() {
         return price;
     }
 
@@ -184,7 +200,7 @@ public class Style {
      * @param price
      *     The price
      */
-    public void setPrice(Price_ price) {
+    public void setPrice(Price__ price) {
         this.price = price;
     }
 
@@ -301,7 +317,7 @@ public class Style {
      * @return
      *     The states
      */
-    public List<String> getStates() {
+    public String[] getStates() {
         return states;
     }
 
@@ -310,7 +326,7 @@ public class Style {
      * @param states
      *     The states
      */
-    public void setStates(List<String> states) {
+    public void setStates(String[] states) {
         this.states = states;
     }
 
@@ -319,7 +335,7 @@ public class Style {
      * @return
      *     The squishVins
      */
-    public List<String> getSquishVins() {
+    public String[] getSquishVins() {
         return squishVins;
     }
 
@@ -328,8 +344,26 @@ public class Style {
      * @param squishVins
      *     The squishVins
      */
-    public void setSquishVins(List<String> squishVins) {
+    public void setSquishVins(String[] squishVins) {
         this.squishVins = squishVins;
+    }
+
+    /**
+     * 
+     * @return
+     *     The MPG
+     */
+    public MPG getMPG() {
+        return MPG;
+    }
+
+    /**
+     * 
+     * @param MPG
+     *     The MPG
+     */
+    public void setMPG(MPG MPG) {
+        this.MPG = MPG;
     }
 
 }

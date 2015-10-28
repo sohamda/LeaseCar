@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1" id="styleDetailsPageDef"
+                Package="carfinder.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="CarApiDataControl" id="CarApiDataControlIterator"/>
+    <accessorIterator MasterBinding="CarApiDataControlIterator" Binds="styles" RangeSize="25"
+                      DataControl="CarApiDataControl" BeanClass="com.car.api.style.Style" id="stylesIterator"/>
+    <accessorIterator MasterBinding="stylesIterator" Binds="price" RangeSize="25" DataControl="CarApiDataControl"
+                      BeanClass="com.car.api.style.Price_" id="priceIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="priceIterator" id="baseMSRP">
+      <AttrNames>
+        <Item Value="baseMSRP"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="baseInvoice">
+      <AttrNames>
+        <Item Value="baseInvoice"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="deliveryCharges">
+      <AttrNames>
+        <Item Value="deliveryCharges"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="estimateTmv">
+      <AttrNames>
+        <Item Value="estimateTmv"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="priceIterator" id="tmvRecommendedRating">
+      <AttrNames>
+        <Item Value="tmvRecommendedRating"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1"
+                id="car_details_task_flow_car_details_task_flow_getDetailOfCarPageDef" Package="carfinder"
+                SkipValidation="true">
+  <parameters/>
+  <executables/>
+  <bindings>
+    <methodAction id="getDetailOfCar" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getDetailOfCar"
+                  IsViewObjectMethod="false" DataControl="CarApiDataControl"
+                  InstanceName="data.CarApiDataControl.dataProvider">
+      <NamedData NDName="makeNickName" NDValue="#{pageFlowScope.makeNickname}" NDType="java.lang.String"/>
+      <NamedData NDName="modelNickName" NDValue="#{pageFlowScope.modelNickname}" NDType="java.lang.String"/>
+      <NamedData NDName="modelYear" NDValue="#{pageFlowScope.modelYear}" NDType="java.lang.Integer"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

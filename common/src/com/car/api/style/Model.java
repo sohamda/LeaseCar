@@ -1,9 +1,7 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Model {
 
     private String id;
@@ -63,5 +61,4 @@ public class Model {
     public void setNiceName(String niceName) {
         this.niceName = niceName;
     }
-
 }

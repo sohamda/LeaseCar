@@ -9,7 +9,7 @@ public class Make {
     private Integer id;
     private String name;
     private String niceName;
-    private Model[] models;// = new ArrayList<Model>();
+    private Model[] models;
 
     /**
      * 

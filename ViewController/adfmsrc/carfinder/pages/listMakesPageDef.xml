@@ -13,6 +13,7 @@
       <nodeDefinition DefName="com.car.api.make.Make" Name="makes0">
         <AttrNames>
           <Item Value="name"/>
+          <Item Value="niceName"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

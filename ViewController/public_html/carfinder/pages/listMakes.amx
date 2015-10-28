@@ -3,7 +3,7 @@
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
   <amx:panelPage id="pp1">
     <amx:facet name="header">
-      <amx:outputText value="List" id="ot1"/>
+      <amx:outputText value="Makes" id="ot1"/>
     </amx:facet>
     <amx:facet name="primary">
       <amx:commandButton text="Need Help ?" id="cb1"/>
@@ -11,9 +11,9 @@
     <amx:listView var="row" value="#{bindings.makes.collectionModel}" fetchSize="#{bindings.makes.rangeSize}"
                   selectedRowKeys="#{bindings.makes.collectionModel.selectedRow}"
                   initialScrollRowKeys="#{bindings.makes.collectionModel.selectedRow}"
-                  selectionListener="#{bindings.makes.collectionModel.makeCurrent}" dividerAttribute="name"
-                  dividerMode="all" showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
-      <amx:listItem id="li1">
+                  selectionListener="#{bindings.makes.collectionModel.makeCurrent}" showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
+      <amx:listItem id="li1" action="showModels">
+        <amx:setPropertyListener id="makeProp" from="#{row.niceName}" to="#{pageFlowScope.selectedMakeNickname}" type="action"/>
         <amx:outputText value="#{row.name}" id="ot2"/>
       </amx:listItem>
     </amx:listView>

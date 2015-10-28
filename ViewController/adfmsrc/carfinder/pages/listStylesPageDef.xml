@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1" id="listStylesPageDef"
+                Package="carfinder.pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="CarApiDataControl" id="CarApiDataControlIterator"/>
+    <accessorIterator MasterBinding="CarApiDataControlIterator" Binds="styles" RangeSize="25"
+                      DataControl="CarApiDataControl" BeanClass="com.car.api.style.Style" id="stylesIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="stylesIterator" id="styles">
+      <nodeDefinition DefName="com.car.api.style.Style" Name="styles0">
+        <AttrNames>
+          <Item Value="name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

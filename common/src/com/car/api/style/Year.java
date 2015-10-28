@@ -1,9 +1,7 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Year {
 
     private Integer id;
@@ -44,5 +42,4 @@ public class Year {
     public void setYear(Integer year) {
         this.year = year;
     }
-
 }

@@ -2,10 +2,10 @@
 package com.car.api.style;
 
 
-public class Option {
+public class Color {
 
     private String category;
-    private Option_[] options;
+    private Option__[] options;
 
     /**
      * 
@@ -30,7 +30,7 @@ public class Option {
      * @return
      *     The options
      */
-    public Option_[] getOptions() {
+    public Option__[] getOptions() {
         return options;
     }
 
@@ -39,7 +39,7 @@ public class Option {
      * @param options
      *     The options
      */
-    public void setOptions(Option_[] options) {
+    public void setOptions(Option__[] options) {
         this.options = options;
     }
 }

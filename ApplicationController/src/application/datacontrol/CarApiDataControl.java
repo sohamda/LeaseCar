@@ -3,16 +3,10 @@ package application.datacontrol;
 import application.RESTCallerUtil;
 
 import com.car.api.make.Make;
-
 import com.car.api.make.MakeApiResponse;
 import com.car.api.make.Model;
-
 import com.car.api.style.Style;
-
 import com.car.api.style.StyleApiResponse;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import java.util.logging.Level;
 
@@ -25,10 +19,15 @@ import oracle.adfmf.util.logging.Trace;
 
 public class CarApiDataControl {
     
-    Make[] makes;// = new ArrayList<>();
+    Make[] makes;
+    Style[] styles;
     private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
     protected ProviderChangeSupport providerChangeSupport = new ProviderChangeSupport(this);
-
+    
+    public CarApiDataControl() {
+        super();
+    } 
+    
     public void setMakes(Make[] makes) {
         Make[] oldMakes = this.makes;
         this.makes = makes;
@@ -40,13 +39,20 @@ public class CarApiDataControl {
             System.out.println("makes are empty ");
             allMakes();
         }
-        System.out.println("return makes "+makes[1].getName());
         return makes;
     }
+    
+    public void setStyles(Style[] styles) {
+        Style[] oldStyles = this.styles;
+        this.styles = styles;
+        propertyChangeSupport.firePropertyChange("styles", oldStyles, styles);
+    }
 
-    public CarApiDataControl() {
-        super();
-    }    
+    public Style[] getStyles() {
+        
+        return styles;
+    }
+   
     // Call : http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=ajbj59h95qs3pbuwb79fq2pz
     private void allMakes() {
         
@@ -76,10 +82,8 @@ public class CarApiDataControl {
     }
     
     // Call : https://api.edmunds.com/api/vehicle/v2/{make_nickname}/{model_nickname}/{model_year}/styles?fmt=json&api_key=ajbj59h95qs3pbuwb79fq2pz&view=full
-    public List<Style> getDetailOfCar(String makeNickName, String modelNickName, Integer modelYear) {
-        
-        List<Style> allStyles = new ArrayList<>();
-        
+    public void getDetailOfCar(String makeNickName, String modelNickName, Integer modelYear) {
+               
         RESTCallerUtil restCallerUtil = new RESTCallerUtil();
         String restResponse = restCallerUtil.invokeStyleAPI("/"+makeNickName+"/"+modelNickName+"/"+modelYear);
         
@@ -93,10 +97,10 @@ public class CarApiDataControl {
         }
         
         if(styleAPIResponse != null) {
-            allStyles = styleAPIResponse.getStyles();
+            setStyles(styleAPIResponse.getStyles());
         }
         
-        return allStyles;
+        providerChangeSupport.fireProviderRefresh("styles");
     }
 
     public void addPropertyChangeListener(PropertyChangeListener l) {

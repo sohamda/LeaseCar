@@ -1,9 +1,7 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Transmission {
 
     private String id;

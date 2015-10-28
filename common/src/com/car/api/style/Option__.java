@@ -2,15 +2,15 @@
 package com.car.api.style;
 
 
-public class Option_ {
+public class Option__ {
 
     private String id;
     private String name;
     private String equipmentType;
-    private Price price;
     private String manufactureOptionName;
     private String manufactureOptionCode;
-    private String description;
+    private ColorChips colorChips;
+    private Price_ price;
 
     /**
      * 
@@ -69,24 +69,6 @@ public class Option_ {
     /**
      * 
      * @return
-     *     The price
-     */
-    public Price getPrice() {
-        return price;
-    }
-
-    /**
-     * 
-     * @param price
-     *     The price
-     */
-    public void setPrice(Price price) {
-        this.price = price;
-    }
-
-    /**
-     * 
-     * @return
      *     The manufactureOptionName
      */
     public String getManufactureOptionName() {
@@ -123,18 +105,36 @@ public class Option_ {
     /**
      * 
      * @return
-     *     The description
+     *     The colorChips
      */
-    public String getDescription() {
-        return description;
+    public ColorChips getColorChips() {
+        return colorChips;
     }
 
     /**
      * 
-     * @param description
-     *     The description
+     * @param colorChips
+     *     The colorChips
      */
-    public void setDescription(String description) {
-        this.description = description;
+    public void setColorChips(ColorChips colorChips) {
+        this.colorChips = colorChips;
+    }
+
+    /**
+     * 
+     * @return
+     *     The price
+     */
+    public Price_ getPrice() {
+        return price;
+    }
+
+    /**
+     * 
+     * @param price
+     *     The price
+     */
+    public void setPrice(Price_ price) {
+        this.price = price;
     }
 }

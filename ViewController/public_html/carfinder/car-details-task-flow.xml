@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <task-flow-definition id="car-details-task-flow">
+    <default-activity>getDetailOfCar</default-activity>
+    <input-parameter-definition id="__1">
+      <name>makeNickName</name>
+      <value>#{pageFlowScope.makeNickName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__2">
+      <name>modelNickName</name>
+      <value>#{pageFlowScope.modelNickName}</value>
+      <class>java.lang.String</class>
+      <required/>
+    </input-parameter-definition>
+    <input-parameter-definition id="__3">
+      <name>modelYear</name>
+      <value>#{pageFlowScope.modelYear}</value>
+      <class>java.lang.Integer</class>
+      <required/>
+    </input-parameter-definition>
+    <method-call id="getDetailOfCar">
+      <method>#{bindings.getDetailOfCar.execute}</method>
+      <outcome>
+        <fixed-outcome>getDetailOfCar</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="listStyles">
+      <page>/carfinder/pages/listStyles.amx</page>
+    </view>
+    <view id="styleDetails">
+      <page>/carfinder/pages/styleDetails.amx</page>
+    </view>
+    <control-flow-rule id="__4">
+      <from-activity-id>getDetailOfCar</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>getDetailOfCar</from-outcome>
+        <to-activity-id>listStyles</to-activity-id>
+        <transition>fade</transition>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>listStyles</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>styleDetails</from-outcome>
+        <to-activity-id>styleDetails</to-activity-id>
+        <transition>slideRight</transition>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-mobile-config>

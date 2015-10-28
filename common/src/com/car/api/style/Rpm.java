@@ -1,9 +1,7 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Rpm {
 
     private Integer horsepower;
@@ -44,5 +42,4 @@ public class Rpm {
     public void setTorque(Integer torque) {
         this.torque = torque;
     }
-
 }

@@ -4,10 +4,20 @@
   <pageMap>
     <page path="/carfinder/pages/listMakes.amx" usageId="mobile_listMakesPageDef"/>
     <page path="/carfinder/pages/listModels.amx" usageId="mobile_listModelsPageDef"/>
+    <page path="/carfinder/pages/listYear.amx" usageId="mobile_listYearPageDef"/>
+    <page path="/carfinder/car-details-task-flow.xml#car-details-task-flow@getDetailOfCar"
+          usageId="mobile_car_details_task_flow_car_details_task_flow_getDetailOfCarPageDef"/>
+    <page path="/carfinder/pages/listStyles.amx" usageId="mobile_listStylesPageDef"/>
+    <page path="/carfinder/pages/styleDetails.amx" usageId="mobile_styleDetailsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="mobile_listMakesPageDef" path="carfinder.pages.listMakesPageDef"/>
     <page id="mobile_listModelsPageDef" path="carfinder.pages.listModelsPageDef"/>
+    <page id="mobile_listYearPageDef" path="carfinder.pages.listYearPageDef"/>
+    <page id="mobile_car_details_task_flow_car_details_task_flow_getDetailOfCarPageDef"
+          path="carfinder.car_details_task_flow_car_details_task_flow_getDetailOfCarPageDef"/>
+    <page id="mobile_listStylesPageDef" path="carfinder.pages.listStylesPageDef"/>
+    <page id="mobile_styleDetailsPageDef" path="carfinder.pages.styleDetailsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="CarApiDataControl" path="application.CarApiDataControl"/>

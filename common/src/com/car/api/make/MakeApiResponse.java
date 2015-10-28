@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MakeApiResponse {
 
-    private Make[] makes; // = new ArrayList<Make>();
+    private Make[] makes; 
     private Integer makesCount;
 
     /**

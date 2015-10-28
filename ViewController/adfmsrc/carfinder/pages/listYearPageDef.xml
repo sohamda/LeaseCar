@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1" id="listModelsPageDef"
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1" id="listYearPageDef"
                 Package="carfinder.pages">
   <parameters/>
   <executables>
@@ -9,13 +9,14 @@
                       DataControl="CarApiDataControl" BeanClass="com.car.api.make.Make" id="makesIterator"/>
     <accessorIterator MasterBinding="makesIterator" Binds="models" RangeSize="25" DataControl="CarApiDataControl"
                       BeanClass="com.car.api.make.Model" id="modelsIterator"/>
+    <accessorIterator MasterBinding="modelsIterator" Binds="years" RangeSize="25" DataControl="CarApiDataControl"
+                      BeanClass="com.car.api.make.Year" id="yearsIterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="modelsIterator" id="models">
-      <nodeDefinition DefName="com.car.api.make.Model" Name="models0">
+    <tree IterBinding="yearsIterator" id="years">
+      <nodeDefinition DefName="com.car.api.make.Year" Name="years0">
         <AttrNames>
-          <Item Value="name"/>
-          <Item Value="niceName"/>
+          <Item Value="year"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

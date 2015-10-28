@@ -8,8 +8,8 @@ public class Year {
 
     private Integer id;
     private Integer year;
-    private String[] states;// = new ArrayList<String>();
-
+    private String[] states;
+    
     /**
      * 
      * @return

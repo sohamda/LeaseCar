@@ -1,9 +1,7 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Submodel {
 
     private String body;
@@ -63,5 +61,4 @@ public class Submodel {
     public void setNiceName(String niceName) {
         this.niceName = niceName;
     }
-
 }

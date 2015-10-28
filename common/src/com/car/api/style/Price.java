@@ -1,12 +1,11 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Price {
 
     private Integer baseMSRP;
+    private Integer baseInvoice;
     private Boolean estimateTmv;
 
     /**
@@ -30,6 +29,24 @@ public class Price {
     /**
      * 
      * @return
+     *     The baseInvoice
+     */
+    public Integer getBaseInvoice() {
+        return baseInvoice;
+    }
+
+    /**
+     * 
+     * @param baseInvoice
+     *     The baseInvoice
+     */
+    public void setBaseInvoice(Integer baseInvoice) {
+        this.baseInvoice = baseInvoice;
+    }
+
+    /**
+     * 
+     * @return
      *     The estimateTmv
      */
     public Boolean getEstimateTmv() {
@@ -44,5 +61,4 @@ public class Price {
     public void setEstimateTmv(Boolean estimateTmv) {
         this.estimateTmv = estimateTmv;
     }
-
 }

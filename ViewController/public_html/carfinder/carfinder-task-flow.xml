@@ -8,6 +8,27 @@
     <view id="listModels">
       <page>/carfinder/pages/listModels.amx</page>
     </view>
+    <view id="listYear">
+      <page>/carfinder/pages/listYear.amx</page>
+    </view>
+    <task-flow-call id="showDetails">
+      <task-flow-reference>
+        <document>/carfinder/car-details-task-flow.xml</document>
+        <id>car-details-task-flow</id>
+      </task-flow-reference>
+      <input-parameter id="__7">
+        <name>makeNickName</name>
+        <value>#{pageFlowScope.makeNickname}</value>
+      </input-parameter>
+      <input-parameter id="__8">
+        <name>modelNickName</name>
+        <value>#{pageFlowScope.modelNickname}</value>
+      </input-parameter>
+      <input-parameter id="__9">
+        <name>modelYear</name>
+        <value>#{pageFlowScope.modelYear}</value>
+      </input-parameter>
+    </task-flow-call>
     <control-flow-rule id="__1">
       <from-activity-id>listMakes</from-activity-id>
       <control-flow-case id="__2">
@@ -16,8 +37,21 @@
         <transition>flipRight</transition>
       </control-flow-case>
     </control-flow-rule>
-    <page-flow-scope-behavior>
-      <push-new/>
-    </page-flow-scope-behavior>
+    <control-flow-rule id="__3">
+      <from-activity-id>listModels</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>showYear</from-outcome>
+        <to-activity-id>listYear</to-activity-id>
+        <transition>flipRight</transition>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>listYear</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>showDetails</from-outcome>
+        <to-activity-id>showDetails</to-activity-id>
+        <transition>flipRight</transition>
+      </control-flow-case>
+    </control-flow-rule>
   </task-flow-definition>
 </adfc-mobile-config>

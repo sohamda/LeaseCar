@@ -1,14 +1,10 @@
 
 package com.car.api.style;
 
-import java.util.ArrayList;
-import java.util.List;
- 
 
- 
 public class StyleApiResponse {
 
-    private List<Style> styles = new ArrayList<Style>();
+    private Style[] styles;
     private Integer stylesCount;
 
     /**
@@ -16,7 +12,7 @@ public class StyleApiResponse {
      * @return
      *     The styles
      */
-    public List<Style> getStyles() {
+    public Style[] getStyles() {
         return styles;
     }
 
@@ -25,7 +21,7 @@ public class StyleApiResponse {
      * @param styles
      *     The styles
      */
-    public void setStyles(List<Style> styles) {
+    public void setStyles(Style[] styles) {
         this.styles = styles;
     }
 

@@ -3,14 +3,16 @@
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
   <amx:panelPage id="pp1">
     <amx:facet name="header">
-      <amx:outputText value="Header" id="ot1"/>
+      <amx:outputText value="#{bindings.makesIterator.currentRow.dataProvider.name}" id="ot1"/>
     </amx:facet>
     <amx:listView var="row" value="#{bindings.models.collectionModel}" fetchSize="#{bindings.models.rangeSize}"
                   selectedRowKeys="#{bindings.models.collectionModel.selectedRow}"
                   initialScrollRowKeys="#{bindings.models.collectionModel.selectedRow}"
                   selectionListener="#{bindings.models.collectionModel.makeCurrent}" showMoreStrategy="autoScroll"
                   bufferStrategy="viewport" id="lv1">
-      <amx:listItem id="li1">
+      <amx:listItem id="li1" action="showYear">
+        <amx:setPropertyListener id="modelProp" from="#{row.niceName}" to="#{pageFlowScope.selectedModelNickname}" type="action"/>
+        <amx:setPropertyListener id="makeProp" from="#{pageFlowScope.selectedMakeNickname}" to="#{pageFlowScope.selectedMakeNickname}" type="action"/>
         <amx:outputText value="#{row.name}" id="ot2"/>
       </amx:listItem>
     </amx:listView>

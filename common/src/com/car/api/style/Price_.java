@@ -1,16 +1,12 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Price_ {
 
     private Integer baseMSRP;
     private Integer baseInvoice;
-    private Integer deliveryCharges;
     private Boolean estimateTmv;
-    private Integer tmvRecommendedRating;
 
     /**
      * 
@@ -51,24 +47,6 @@ public class Price_ {
     /**
      * 
      * @return
-     *     The deliveryCharges
-     */
-    public Integer getDeliveryCharges() {
-        return deliveryCharges;
-    }
-
-    /**
-     * 
-     * @param deliveryCharges
-     *     The deliveryCharges
-     */
-    public void setDeliveryCharges(Integer deliveryCharges) {
-        this.deliveryCharges = deliveryCharges;
-    }
-
-    /**
-     * 
-     * @return
      *     The estimateTmv
      */
     public Boolean getEstimateTmv() {
@@ -83,23 +61,4 @@ public class Price_ {
     public void setEstimateTmv(Boolean estimateTmv) {
         this.estimateTmv = estimateTmv;
     }
-
-    /**
-     * 
-     * @return
-     *     The tmvRecommendedRating
-     */
-    public Integer getTmvRecommendedRating() {
-        return tmvRecommendedRating;
-    }
-
-    /**
-     * 
-     * @param tmvRecommendedRating
-     *     The tmvRecommendedRating
-     */
-    public void setTmvRecommendedRating(Integer tmvRecommendedRating) {
-        this.tmvRecommendedRating = tmvRecommendedRating;
-    }
-
 }

@@ -1,9 +1,7 @@
 
 package com.car.api.style;
 
- 
 
- 
 public class Engine {
 
     private String id;
@@ -18,12 +16,13 @@ public class Engine {
     private Integer horsepower;
     private Integer torque;
     private Integer totalValves;
+    private String manufacturerEngineCode;
     private String type;
     private String code;
     private String compressorType;
     private Rpm rpm;
     private Valve valve;
-
+    
     /**
      * 
      * @return
@@ -243,6 +242,24 @@ public class Engine {
     /**
      * 
      * @return
+     *     The manufacturerEngineCode
+     */
+    public String getManufacturerEngineCode() {
+        return manufacturerEngineCode;
+    }
+
+    /**
+     * 
+     * @param manufacturerEngineCode
+     *     The manufacturerEngineCode
+     */
+    public void setManufacturerEngineCode(String manufacturerEngineCode) {
+        this.manufacturerEngineCode = manufacturerEngineCode;
+    }
+
+    /**
+     * 
+     * @return
      *     The type
      */
     public String getType() {
@@ -329,5 +346,4 @@ public class Engine {
     public void setValve(Valve valve) {
         this.valve = valve;
     }
-
 }

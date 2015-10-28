@@ -2,8 +2,6 @@
 package com.car.api.style;
 
 
-
-
 public class Categories {
 
     private String market;
@@ -120,5 +118,4 @@ public class Categories {
     public void setVehicleType(String vehicleType) {
         this.vehicleType = vehicleType;
     }
-
 }
