@@ -8,7 +8,7 @@
     <accessorIterator MasterBinding="CarApiDataControlIterator" Binds="styles" RangeSize="25"
                       DataControl="CarApiDataControl" BeanClass="com.car.api.style.Style" id="stylesIterator"/>
     <accessorIterator MasterBinding="stylesIterator" Binds="price" RangeSize="25" DataControl="CarApiDataControl"
-                      BeanClass="com.car.api.style.Price__" id="priceIterator"/>
+                      BeanClass="com.car.api.style.StylePrice" id="priceIterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="priceIterator" id="baseMSRP">

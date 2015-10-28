@@ -2,23 +2,23 @@
 package com.car.api.style;
 
 
-public class Price__ {
+public class StylePrice {
 
-    private Integer baseMSRP;
-    private Integer baseInvoice;
-    private Integer deliveryCharges;
-    private Integer usedTmvRetail;
-    private Integer usedPrivateParty;
-    private Integer usedTradeIn;
+    private Double baseMSRP;
+    private Double baseInvoice;
+    private Double deliveryCharges;
+    private Double usedTmvRetail;
+    private Double usedPrivateParty;
+    private Double usedTradeIn;
     private Boolean estimateTmv;
-    private Integer tmvRecommendedRating;
+    private Double tmvRecommendedRating;
 
     /**
      * 
      * @return
      *     The baseMSRP
      */
-    public Integer getBaseMSRP() {
+    public Double getBaseMSRP() {
         return baseMSRP;
     }
 
@@ -27,7 +27,7 @@ public class Price__ {
      * @param baseMSRP
      *     The baseMSRP
      */
-    public void setBaseMSRP(Integer baseMSRP) {
+    public void setBaseMSRP(Double baseMSRP) {
         this.baseMSRP = baseMSRP;
     }
 
@@ -36,7 +36,7 @@ public class Price__ {
      * @return
      *     The baseInvoice
      */
-    public Integer getBaseInvoice() {
+    public Double getBaseInvoice() {
         return baseInvoice;
     }
 
@@ -45,7 +45,7 @@ public class Price__ {
      * @param baseInvoice
      *     The baseInvoice
      */
-    public void setBaseInvoice(Integer baseInvoice) {
+    public void setBaseInvoice(Double baseInvoice) {
         this.baseInvoice = baseInvoice;
     }
 
@@ -54,7 +54,7 @@ public class Price__ {
      * @return
      *     The deliveryCharges
      */
-    public Integer getDeliveryCharges() {
+    public Double getDeliveryCharges() {
         return deliveryCharges;
     }
 
@@ -63,7 +63,7 @@ public class Price__ {
      * @param deliveryCharges
      *     The deliveryCharges
      */
-    public void setDeliveryCharges(Integer deliveryCharges) {
+    public void setDeliveryCharges(Double deliveryCharges) {
         this.deliveryCharges = deliveryCharges;
     }
 
@@ -72,7 +72,7 @@ public class Price__ {
      * @return
      *     The usedTmvRetail
      */
-    public Integer getUsedTmvRetail() {
+    public Double getUsedTmvRetail() {
         return usedTmvRetail;
     }
 
@@ -81,7 +81,7 @@ public class Price__ {
      * @param usedTmvRetail
      *     The usedTmvRetail
      */
-    public void setUsedTmvRetail(Integer usedTmvRetail) {
+    public void setUsedTmvRetail(Double usedTmvRetail) {
         this.usedTmvRetail = usedTmvRetail;
     }
 
@@ -90,7 +90,7 @@ public class Price__ {
      * @return
      *     The usedPrivateParty
      */
-    public Integer getUsedPrivateParty() {
+    public Double getUsedPrivateParty() {
         return usedPrivateParty;
     }
 
@@ -99,7 +99,7 @@ public class Price__ {
      * @param usedPrivateParty
      *     The usedPrivateParty
      */
-    public void setUsedPrivateParty(Integer usedPrivateParty) {
+    public void setUsedPrivateParty(Double usedPrivateParty) {
         this.usedPrivateParty = usedPrivateParty;
     }
 
@@ -108,7 +108,7 @@ public class Price__ {
      * @return
      *     The usedTradeIn
      */
-    public Integer getUsedTradeIn() {
+    public Double getUsedTradeIn() {
         return usedTradeIn;
     }
 
@@ -117,7 +117,7 @@ public class Price__ {
      * @param usedTradeIn
      *     The usedTradeIn
      */
-    public void setUsedTradeIn(Integer usedTradeIn) {
+    public void setUsedTradeIn(Double usedTradeIn) {
         this.usedTradeIn = usedTradeIn;
     }
 
@@ -144,7 +144,7 @@ public class Price__ {
      * @return
      *     The tmvRecommendedRating
      */
-    public Integer getTmvRecommendedRating() {
+    public Double getTmvRecommendedRating() {
         return tmvRecommendedRating;
     }
 
@@ -153,7 +153,7 @@ public class Price__ {
      * @param tmvRecommendedRating
      *     The tmvRecommendedRating
      */
-    public void setTmvRecommendedRating(Integer tmvRecommendedRating) {
+    public void setTmvRecommendedRating(Double tmvRecommendedRating) {
         this.tmvRecommendedRating = tmvRecommendedRating;
     }
 }

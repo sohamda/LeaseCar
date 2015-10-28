@@ -29,7 +29,7 @@
     <view id="listStyles">
       <page>/carfinder/pages/listStyles.amx</page>
     </view>
-    <view id="details">
+    <view id="styleDetails">
       <page>/carfinder/pages/styleDetails.amx</page>
     </view>
     <control-flow-rule id="__4">
@@ -44,7 +44,7 @@
       <from-activity-id>listStyles</from-activity-id>
       <control-flow-case id="__7">
         <from-outcome>seeDetails</from-outcome>
-        <to-activity-id>details</to-activity-id>
+        <to-activity-id>styleDetails</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

@@ -13,7 +13,7 @@ public class Style {
     private Option[] options;
     private Color[] colors;
     private String manufacturerCode;
-    private Price__ price;
+    private StylePrice price;
     private Categories categories;
     private Integer id;
     private String name;
@@ -191,7 +191,7 @@ public class Style {
      * @return
      *     The price
      */
-    public Price__ getPrice() {
+    public StylePrice getPrice() {
         return price;
     }
 
@@ -200,7 +200,7 @@ public class Style {
      * @param price
      *     The price
      */
-    public void setPrice(Price__ price) {
+    public void setPrice(StylePrice price) {
         this.price = price;
     }
 

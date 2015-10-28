@@ -64,12 +64,10 @@ public class CarApiDataControl {
         try {
             makeAPIResponse = (MakeApiResponse) jbsh.fromJSON(MakeApiResponse.class, restResponse);
         } catch (Exception e) {
-            System.out.println("exception to transform "+e.getMessage());
             Trace.log("CarApiDataControl",Level.SEVERE, this.getClass(),"allMakes", e.getLocalizedMessage());
         }
         
         if(makeAPIResponse != null) {
-            System.out.println("makeAPIResponse is not null "+ makeAPIResponse.getMakes());
             setMakes(makeAPIResponse.getMakes());
         }
         providerChangeSupport.fireProviderRefresh("makes");
@@ -90,13 +88,13 @@ public class CarApiDataControl {
         JSONBeanSerializationHelper jbsh = new JSONBeanSerializationHelper();
         StyleApiResponse styleAPIResponse = null;
 
-        try {
+        try {            
             styleAPIResponse = (StyleApiResponse) jbsh.fromJSON(StyleApiResponse.class, restResponse);
         } catch (Exception e) {
             Trace.log("CarApiDataControl",Level.SEVERE, this.getClass(),"getDetailOfCar", e.getLocalizedMessage());
         }
         
-        if(styleAPIResponse != null) {
+        if(styleAPIResponse != null) {            
             setStyles(styleAPIResponse.getStyles());
         }
         

@@ -2,7 +2,7 @@
 package com.car.api.style;
 
 
-public class Option__ {
+public class ColorOption {
 
     private String id;
     private String name;
@@ -10,7 +10,7 @@ public class Option__ {
     private String manufactureOptionName;
     private String manufactureOptionCode;
     private ColorChips colorChips;
-    private Price_ price;
+    private OptionPrice price;
 
     /**
      * 
@@ -125,7 +125,7 @@ public class Option__ {
      * @return
      *     The price
      */
-    public Price_ getPrice() {
+    public OptionPrice getPrice() {
         return price;
     }
 
@@ -134,7 +134,7 @@ public class Option__ {
      * @param price
      *     The price
      */
-    public void setPrice(Price_ price) {
+    public void setPrice(OptionPrice price) {
         this.price = price;
     }
 }

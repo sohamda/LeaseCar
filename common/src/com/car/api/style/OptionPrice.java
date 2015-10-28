@@ -2,10 +2,10 @@
 package com.car.api.style;
 
 
-public class Price_ {
+public class OptionPrice {
 
-    private Integer baseMSRP;
-    private Integer baseInvoice;
+    private Double baseMSRP;
+    private Double baseInvoice;
     private Boolean estimateTmv;
 
     /**
@@ -13,7 +13,7 @@ public class Price_ {
      * @return
      *     The baseMSRP
      */
-    public Integer getBaseMSRP() {
+    public Double getBaseMSRP() {
         return baseMSRP;
     }
 
@@ -22,7 +22,7 @@ public class Price_ {
      * @param baseMSRP
      *     The baseMSRP
      */
-    public void setBaseMSRP(Integer baseMSRP) {
+    public void setBaseMSRP(Double baseMSRP) {
         this.baseMSRP = baseMSRP;
     }
 
@@ -31,7 +31,7 @@ public class Price_ {
      * @return
      *     The baseInvoice
      */
-    public Integer getBaseInvoice() {
+    public Double getBaseInvoice() {
         return baseInvoice;
     }
 
@@ -40,7 +40,7 @@ public class Price_ {
      * @param baseInvoice
      *     The baseInvoice
      */
-    public void setBaseInvoice(Integer baseInvoice) {
+    public void setBaseInvoice(Double baseInvoice) {
         this.baseInvoice = baseInvoice;
     }
 

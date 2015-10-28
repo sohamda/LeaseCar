@@ -2,7 +2,7 @@
 package com.car.api.style;
 
 
-public class Option_ {
+public class DetailOption {
 
     private String id;
     private String name;

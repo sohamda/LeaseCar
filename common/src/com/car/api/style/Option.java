@@ -5,7 +5,7 @@ package com.car.api.style;
 public class Option {
 
     private String category;
-    private Option_[] options;
+    private DetailOption[] options;
 
     /**
      * 
@@ -30,7 +30,7 @@ public class Option {
      * @return
      *     The options
      */
-    public Option_[] getOptions() {
+    public DetailOption[] getOptions() {
         return options;
     }
 
@@ -39,7 +39,7 @@ public class Option {
      * @param options
      *     The options
      */
-    public void setOptions(Option_[] options) {
+    public void setOptions(DetailOption[] options) {
         this.options = options;
     }
 }
