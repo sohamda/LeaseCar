@@ -115,6 +115,44 @@
                </list>
             </hash>
             <url n="jarURL" path="deploy/Android2/Android2.jar/"/>
+            <hash n="mnfImageOptions">
+               <list n="deviceTypes">
+                  <hash>
+                     <value n="appIconPath" v="resources/custom/display-xhdpi-icon.png"/>
+                     <value n="deviceTypeName" v="Extra-High Density"/>
+                     <value n="landscapeSplashScreenPath" v="resources/custom/display-land-xhdpi-splashscreen.png"/>
+                     <value n="portraitSplashScreenPath" v="resources/custom/display-port-xhdpi-splashscreen.png"/>
+                  </hash>
+                  <hash>
+                     <value n="appIconPath" v="resources/custom/display-mdpi-icon.png"/>
+                     <value n="deviceTypeName" v="Medium Density"/>
+                     <value n="landscapeSplashScreenPath" v="resources/custom/display-land-mdpi-splashscreen.png"/>
+                     <value n="portraitSplashScreenPath" v="resources/custom/display-port-mdpi-splashscreen.png"/>
+                  </hash>
+                  <hash>
+                     <value n="appIconPath" v="resources/custom/display-xxxhdpi-icon.png"/>
+                     <value n="deviceTypeName" v="Extra-Extra-Extra-High Density"/>
+                  </hash>
+                  <hash>
+                     <value n="appIconPath" v="resources/custom/display-hdpi-icon.png"/>
+                     <value n="deviceTypeName" v="High Density"/>
+                     <value n="landscapeSplashScreenPath" v="resources/custom/display-land-hdpi-splashscreen.png"/>
+                     <value n="portraitSplashScreenPath" v="resources/custom/display-port-hdpi-splashscreen.png"/>
+                  </hash>
+                  <hash>
+                     <value n="appIconPath" v="resources/custom/display-xxhdpi-icon.png"/>
+                     <value n="deviceTypeName" v="Extra-Extra-High Density"/>
+                     <value n="landscapeSplashScreenPath" v="resources/custom/display-land-xxhdpi-splashscreen.png"/>
+                     <value n="portraitSplashScreenPath" v="resources/custom/display-port-xxhdpi-splashscreen.png"/>
+                  </hash>
+                  <hash>
+                     <value n="appIconPath" v="resources/custom/display-ldpi-icon.png"/>
+                     <value n="deviceTypeName" v="Low Density"/>
+                     <value n="landscapeSplashScreenPath" v="resources/custom/display-land-ldpi-splashscreen.png"/>
+                     <value n="portraitSplashScreenPath" v="resources/custom/display-port-ldpi-splashscreen.png"/>
+                  </hash>
+               </list>
+            </hash>
             <value n="profileClass" v="oracle.adfmf.framework.dt.deploy.android.AndroidProfile"/>
             <value n="profileName" v="Android2"/>
          </hash>
@@ -198,10 +236,10 @@
          </hash>
       </hash>
       <list n="profileList">
-         <string v="LeaseCar_archive"/>
-         <string v="iOS1"/>
          <string v="Android1"/>
          <string v="Android2"/>
+         <string v="iOS1"/>
+         <string v="LeaseCar_archive"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
