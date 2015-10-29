@@ -32,6 +32,12 @@
     <view id="styleDetails">
       <page>/carfinder/pages/styleDetails.amx</page>
     </view>
+    <method-call id="retrievePhotos">
+      <method>#{bindings.retrievePhotos.execute}</method>
+      <outcome>
+        <fixed-outcome>retrievePhotos</fixed-outcome>
+      </outcome>
+    </method-call>
     <control-flow-rule id="__4">
       <from-activity-id>getDetailOfCar</from-activity-id>
       <control-flow-case id="__5">
@@ -44,6 +50,13 @@
       <from-activity-id>listStyles</from-activity-id>
       <control-flow-case id="__7">
         <from-outcome>seeDetails</from-outcome>
+        <to-activity-id>retrievePhotos</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__8">
+      <from-activity-id>retrievePhotos</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome>retrievePhotos</from-outcome>
         <to-activity-id>styleDetails</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

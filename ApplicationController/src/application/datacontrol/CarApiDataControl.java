@@ -8,6 +8,8 @@ import com.car.api.make.Model;
 import com.car.api.style.Style;
 import com.car.api.style.StyleApiResponse;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 import oracle.adfmf.framework.api.JSONBeanSerializationHelper;
@@ -15,14 +17,20 @@ import oracle.adfmf.java.beans.PropertyChangeListener;
 import oracle.adfmf.java.beans.PropertyChangeSupport;
 import oracle.adfmf.java.beans.ProviderChangeListener;
 import oracle.adfmf.java.beans.ProviderChangeSupport;
+import oracle.adfmf.json.JSONArray;
+import oracle.adfmf.json.JSONObject;
 import oracle.adfmf.util.logging.Trace;
 
 public class CarApiDataControl {
     
     Make[] makes;
     Style[] styles;
+    String[] photoSrc;
+    
     private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(this);
     protected ProviderChangeSupport providerChangeSupport = new ProviderChangeSupport(this);
+    
+    private static final String PHOTO_URL = "http://media.ed.edmunds-media.com";
     
     public CarApiDataControl() {
         super();
@@ -52,7 +60,18 @@ public class CarApiDataControl {
         
         return styles;
     }
-   
+
+
+    public void setPhotoSrc(String[] photoSrc) {
+        String[] oldPhotoSrc = this.photoSrc;
+        this.photoSrc = photoSrc;
+        propertyChangeSupport.firePropertyChange("photoSrc", oldPhotoSrc, photoSrc);
+    }
+
+    public String[] getPhotoSrc() {
+        return photoSrc;
+    }
+
     // Call : http://api.edmunds.com/api/vehicle/v2/makes?fmt=json&api_key=ajbj59h95qs3pbuwb79fq2pz
     private void allMakes() {
         
@@ -99,6 +118,33 @@ public class CarApiDataControl {
         }
         
         providerChangeSupport.fireProviderRefresh("styles");
+    }
+    
+    public void retrievePhotos(String styleId) {
+        
+        RESTCallerUtil restCallerUtil = new RESTCallerUtil();
+        String restResponse = restCallerUtil.invokePhotosAPI(styleId);
+        
+        List<String> photosWithCompleteURL = new ArrayList<>();
+        try {                        
+            JSONArray photosArray = new JSONArray(restResponse);
+            for(int i = 0; i < photosArray.length(); i++) {
+                JSONObject result = photosArray.getJSONObject(i);
+                JSONArray photoSrcs = (JSONArray) result.get("photoSrcs");
+                for(int j = 0; i < photoSrcs.length(); j++) {
+                    photosWithCompleteURL.add(PHOTO_URL + photoSrcs.get(j));
+                }
+            }
+        } catch (Exception e) {
+            Trace.log("CarApiDataControl",Level.SEVERE, this.getClass(),"getphotos", e.getLocalizedMessage());
+        }
+        
+        if(!photosWithCompleteURL.isEmpty()) {  
+            System.out.println("Photos :" + photosWithCompleteURL);
+            setPhotoSrc(photosWithCompleteURL.toArray(new String[photosWithCompleteURL.size()]));
+        }
+        
+        providerChangeSupport.fireProviderRefresh("photoSrc");
     }
 
     public void addPropertyChangeListener(PropertyChangeListener l) {

@@ -13,9 +13,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">273.5</property>
+         name="y">273.79883</property>
       <property
-         name="x">243.7627</property>
+         name="x">101.762695</property>
    </MethodCall>
    <View
       id="View3">
@@ -28,9 +28,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">274.59766</property>
+         name="y">271.89648</property>
       <property
-         name="x">484.0</property>
+         name="x">330.0</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -40,7 +40,7 @@
       <property
          name="fromOutcome">getDetailOfCar</property>
       <property
-         name="sdm:polyPoints">R50,284.7627,273.1494,443.0,274.24707,L50</property>
+         name="sdm:polyPoints">R50,142.7627,273.44824,289.0,271.5459,L50</property>
    </ControlFlowCase>
    <View
       id="View5">
@@ -53,18 +53,41 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">276.59766</property>
+         name="y">270.89648</property>
       <property
-         name="x">690.0</property>
+         name="x">795.0</property>
    </View>
+   <MethodCall
+      id="MethodCall8">
+      <property
+         name="activityId">retrievePhotos</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>retrievePhotos&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">270.44824</property>
+      <property
+         name="x">548.6865</property>
+   </MethodCall>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase6"
+      id="ControlFlowCase9"
       from="View3"
-      to="View5">
+      to="MethodCall8">
       <property
          name="fromOutcome">seeDetails</property>
       <property
-         name="sdm:polyPoints">R50,525.0,274.24707,649.0,276.24707,L50</property>
+         name="sdm:polyPoints">R50,371.0,271.5459,507.68652,270.09766,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="MethodCall8"
+      to="View5">
+      <property
+         name="fromOutcome">retrievePhotos</property>
+      <property
+         name="sdm:polyPoints">R50,589.6865,270.09766,754.0,270.5459,L50</property>
    </ControlFlowCase>
 </SDM>

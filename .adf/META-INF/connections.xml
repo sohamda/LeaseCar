@@ -49,4 +49,14 @@
       </XmlRefAddr>
     </RefAddresses>
   </Reference>
+  <Reference name="photoService" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="photoService">
+        <Contents>
+          <restconnection name="photoService" url="https://api.edmunds.com/v1/"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
 </References>

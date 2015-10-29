@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.2.1"
+                id="car_details_task_flow_car_details_task_flow_retrievePhotosPageDef" Package="carfinder"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+  </executables>
+  <bindings>
+    <methodAction id="retrievePhotos" RequiresUpdateModel="true" Action="invokeMethod" MethodName="retrievePhotos"
+                  IsViewObjectMethod="false" DataControl="CarApiDataControl"
+                  InstanceName="data.CarApiDataControl.dataProvider">
+      <NamedData NDName="styleId" NDValue="#{pageFlowScope.currentStyleId}" NDType="java.lang.String"/>
+    </methodAction>
+  </bindings>
+</pageDefinition>

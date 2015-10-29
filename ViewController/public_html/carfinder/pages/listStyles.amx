@@ -3,7 +3,7 @@
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
   <amx:panelPage id="pp1">
     <amx:facet name="header">
-      <amx:outputText value="#{bindings.stylesIterator.currentRow.dataProvider.make.name} #{bindings.stylesIterator.currentRow.dataProvider.model.name}" id="ot1"/>
+      <amx:outputText value="#{pageFlowScope.makeNickName} #{pageFlowScope.modelNickName}" id="ot1"/>
     </amx:facet>
     <amx:listView var="row" value="#{bindings.styles.collectionModel}" fetchSize="#{bindings.styles.rangeSize}"
                   selectedRowKeys="#{bindings.styles.collectionModel.selectedRow}"
@@ -11,6 +11,7 @@
                   selectionListener="#{bindings.styles.collectionModel.makeCurrent}" showMoreStrategy="autoScroll"
                   bufferStrategy="viewport" id="lv1">
       <amx:listItem id="li1" action="seeDetails">
+        <amx:setPropertyListener id="styleProp" from="#{row.id}" to="#{pageFlowScope.currentStyleId}" type="action"/>
         <amx:outputText value="#{row.name}" id="ot2"/>
       </amx:listItem>
     </amx:listView>

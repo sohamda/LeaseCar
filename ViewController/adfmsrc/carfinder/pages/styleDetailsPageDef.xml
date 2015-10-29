@@ -9,6 +9,12 @@
                       DataControl="CarApiDataControl" BeanClass="com.car.api.style.Style" id="stylesIterator"/>
     <accessorIterator MasterBinding="stylesIterator" Binds="price" RangeSize="25" DataControl="CarApiDataControl"
                       BeanClass="com.car.api.style.StylePrice" id="priceIterator"/>
+    <accessorIterator MasterBinding="stylesIterator" Binds="make" RangeSize="25" DataControl="CarApiDataControl"
+                      BeanClass="com.car.api.style.Make" id="makeIterator"/>
+    <accessorIterator MasterBinding="stylesIterator" Binds="model" RangeSize="25" DataControl="CarApiDataControl"
+                      BeanClass="com.car.api.style.Model" id="modelIterator"/>
+    <accessorIterator MasterBinding="CarApiDataControlIterator" Binds="photoSrc" RangeSize="25"
+                      DataControl="CarApiDataControl" BeanClass="java.lang.String" id="photoSrcIterator"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="priceIterator" id="baseMSRP">
@@ -51,5 +57,22 @@
         <Item Value="tmvRecommendedRating"/>
       </AttrNames>
     </attributeValues>
+    <attributeValues IterBinding="makeIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="modelIterator" id="name1">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="photoSrcIterator" id="photoSrc">
+      <nodeDefinition Name="photoSrc0">
+        <AttrNames>
+          <Item Value="element"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
   </bindings>
 </pageDefinition>
