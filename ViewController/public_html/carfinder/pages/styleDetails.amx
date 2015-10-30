@@ -5,13 +5,9 @@
         <amx:facet name="header">
             <amx:outputText value="#{bindings.stylesIterator.currentRow.dataProvider.name}" id="ot1"/>
         </amx:facet>
-        <amx:panelFormLayout id="pfl2" labelPosition="end" fieldHalign="start">
-            <amx:panelLabelAndMessage label="" id="plam9">
-                <amx:outputText value="#{bindings.name.inputValue}" id="ot10"/>
-            </amx:panelLabelAndMessage>
-            <amx:panelLabelAndMessage label="" id="plam10">
-                <amx:outputText value="#{bindings.name1.inputValue}" id="ot11"/>
-            </amx:panelLabelAndMessage>
+        <amx:panelFormLayout id="pfl3">
+            <amx:inputText value="#{bindings.name.inputValue}" id="ot10" readOnly="true" label="Make"/>
+            <amx:inputText value="#{bindings.name1.inputValue}" id="ot11" readOnly="true" label="Model"/>
         </amx:panelFormLayout>
         <amx:panelFormLayout id="pfl1">
             <amx:panelLabelAndMessage label="#{bindings.baseMSRP.hints.label}" id="plam6">

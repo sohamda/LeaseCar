@@ -43,7 +43,7 @@
       <control-flow-case id="__5">
         <from-outcome>getDetailOfCar</from-outcome>
         <to-activity-id>listStyles</to-activity-id>
-        <transition>fade</transition>
+        <transition>flipRight</transition>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__6">
@@ -51,6 +51,7 @@
       <control-flow-case id="__7">
         <from-outcome>seeDetails</from-outcome>
         <to-activity-id>retrievePhotos</to-activity-id>
+        <transition>flipRight</transition>
       </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__8">
@@ -58,6 +59,7 @@
       <control-flow-case id="__9">
         <from-outcome>retrievePhotos</from-outcome>
         <to-activity-id>styleDetails</to-activity-id>
+        <transition>flipRight</transition>
       </control-flow-case>
     </control-flow-rule>
   </task-flow-definition>

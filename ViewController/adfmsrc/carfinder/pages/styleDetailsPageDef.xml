@@ -74,5 +74,10 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <attributeValues IterBinding="photoSrcIterator" id="element">
+      <AttrNames>
+        <Item Value="element"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

@@ -8,4 +8,7 @@
     <adfmf:navigationBar enabled="false"/>
   </adfmf:navigation>
   <adfmf:login defaultConnRefId="LeaseCar"/>
+  <adfmf:remoteURLWhiteList>
+    <adfmf:domain id="d1">http://media.ed.edmunds-media.com</adfmf:domain>
+  </adfmf:remoteURLWhiteList>
 </adfmf:application>

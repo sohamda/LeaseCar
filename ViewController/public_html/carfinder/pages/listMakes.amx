@@ -5,9 +5,6 @@
     <amx:facet name="header">
       <amx:outputText value="Makes" id="ot1"/>
     </amx:facet>
-    <amx:facet name="primary">
-      <amx:commandButton text="Need Help ?" id="cb1"/>
-    </amx:facet>
     <amx:listView var="row" value="#{bindings.makes.collectionModel}" fetchSize="#{bindings.makes.rangeSize}"
                   selectedRowKeys="#{bindings.makes.collectionModel.selectedRow}"
                   initialScrollRowKeys="#{bindings.makes.collectionModel.selectedRow}"

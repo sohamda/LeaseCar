@@ -140,8 +140,8 @@ public class CarApiDataControl {
         }
         
         if(!photosWithCompleteURL.isEmpty()) {  
-            System.out.println("Photos :" + photosWithCompleteURL);
             setPhotoSrc(photosWithCompleteURL.toArray(new String[photosWithCompleteURL.size()]));
+            System.out.println("Photos :" + photoSrc[3]);
         }
         
         providerChangeSupport.fireProviderRefresh("photoSrc");
