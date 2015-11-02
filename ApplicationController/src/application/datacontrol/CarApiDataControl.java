@@ -131,8 +131,11 @@ public class CarApiDataControl {
             for(int i = 0; i < photosArray.length(); i++) {
                 JSONObject result = photosArray.getJSONObject(i);
                 JSONArray photoSrcs = (JSONArray) result.get("photoSrcs");
-                for(int j = 0; i < photoSrcs.length(); j++) {
-                    photosWithCompleteURL.add(PHOTO_URL + photoSrcs.get(j));
+                for(int j = 0; j < photoSrcs.length(); j++) {
+                    String photoSrc = (String) photoSrcs.get(j);
+                    if(photoSrc.endsWith("815.jpg")) {
+                        photosWithCompleteURL.add(PHOTO_URL + photoSrc);
+                    }
                 }
             }
         } catch (Exception e) {
