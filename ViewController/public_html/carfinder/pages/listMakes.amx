@@ -2,16 +2,22 @@
 <amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
   <amx:panelPage id="pp1">
+    <amx:facet name="primary">
+      <amx:commandLink actionListener="#{bindings.toggleSpringboard.execute}" id="cl1">
+        <amx:image inlineStyle="width:32px;height:32px" source="/images/springboard.png" id="i1"/>
+      </amx:commandLink>
+    </amx:facet>
     <amx:facet name="header">
-      <amx:outputText value="Makes" id="ot1"/>
+      <amx:outputText value="Makes" id="ot2"/>
     </amx:facet>
     <amx:listView var="row" value="#{bindings.makes.collectionModel}" fetchSize="#{bindings.makes.rangeSize}"
                   selectedRowKeys="#{bindings.makes.collectionModel.selectedRow}"
                   initialScrollRowKeys="#{bindings.makes.collectionModel.selectedRow}"
-                  selectionListener="#{bindings.makes.collectionModel.makeCurrent}" showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1">
-      <amx:listItem id="li1" action="showModels">
+                  selectionListener="#{bindings.makes.collectionModel.makeCurrent}" showMoreStrategy="autoScroll" bufferStrategy="viewport" id="lv1"
+                  dividerMode="firstLetter" dividerAttribute="name">
+      <amx:listItem id="li1" action="showModels" inlineStyle="background-color:transparent;">
         <amx:setPropertyListener id="makeProp" from="#{row.niceName}" to="#{pageFlowScope.selectedMakeNickname}" type="action"/>
-        <amx:outputText value="#{row.name}" id="ot2"/>
+        <amx:outputText value="#{row.name}" id="ot3"/>
       </amx:listItem>
     </amx:listView>
   </amx:panelPage>

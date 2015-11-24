@@ -11,6 +11,7 @@
     <page path="/carfinder/pages/styleDetails.amx" usageId="mobile_styleDetailsPageDef"/>
     <page path="/carfinder/car-details-task-flow.xml#car-details-task-flow@retrievePhotos"
           usageId="mobile_car_details_task_flow_car_details_task_flow_retrievePhotosPageDef"/>
+    <page path="/carfinder/pages/Navigation.amx" usageId="mobile_NavigationPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="mobile_listMakesPageDef" path="carfinder.pages.listMakesPageDef"/>
@@ -22,8 +23,10 @@
     <page id="mobile_styleDetailsPageDef" path="carfinder.pages.styleDetailsPageDef"/>
     <page id="mobile_car_details_task_flow_car_details_task_flow_retrievePhotosPageDef"
           path="carfinder.car_details_task_flow_car_details_task_flow_retrievePhotosPageDef"/>
+    <page id="mobile_NavigationPageDef" path="carfinder.pages.NavigationPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
+    <dc id="ApplicationFeatures" path="application.ApplicationFeatures"/>
     <dc id="CarApiDataControl" path="application.CarApiDataControl"/>
   </dataControlUsages>
 </Application>

@@ -9,6 +9,9 @@
                       DataControl="CarApiDataControl" BeanClass="com.car.api.make.Make" id="makesIterator"/>
   </executables>
   <bindings>
+    <methodAction id="toggleSpringboard" RequiresUpdateModel="true" Action="invokeMethod" MethodName="toggleSpringboard"
+                  IsViewObjectMethod="false" DataControl="ApplicationFeatures"
+                  InstanceName="data.ApplicationFeatures.dataProvider"/>
     <tree IterBinding="makesIterator" id="makes">
       <nodeDefinition DefName="com.car.api.make.Make" Name="makes0">
         <AttrNames>

@@ -257,7 +257,9 @@
             </hash>
             <hash/>
          </list>
-         <list n="url-path"/>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
       </hash>
    </hash>
    <hash n="ResourceBundleOptions">

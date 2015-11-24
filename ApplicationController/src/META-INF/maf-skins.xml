@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<adfmf-skins xmlns="http://xmlns.oracle.com/adf/mf/skin"></adfmf-skins>
+<adfmf-skins xmlns="http://xmlns.oracle.com/adf/mf/skin">
+  <skin id="s1">
+    <family>CustomSkin</family>
+    <id>CustomSkin.Android</id>
+    <extends>mobileAlta-v1.3.Android</extends>
+    <style-sheet-name>resources/skins/LeaseCarSkin/LeaseCarSkin.css</style-sheet-name>
+    <version>
+      <name>v-1</name>
+    </version>
+  </skin>
+  <skin id="s2">
+    <family>CustomSkin</family>
+    <id>CustomSkin.Android</id>
+    <extends>mobileAlta-v1.4.Android</extends>
+    <style-sheet-name>resources/skins/LeaseCarSkin/LeaseCar.css</style-sheet-name>
+    <version>
+      <name>v-2</name>
+    </version>
+  </skin>
+</adfmf-skins>

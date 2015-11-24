@@ -1,7 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <SDM>
    <OverallProperties
-      id="OverallProperties1"/>
+      id="OverallProperties1">
+      <property
+         name="y">266.5</property>
+      <property
+         name="x">91.5</property>
+   </OverallProperties>
    <View
       id="View2">
       <property
@@ -15,9 +20,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">157.24707</property>
+         name="y">98.79883</property>
       <property
-         name="x">-96.0</property>
+         name="x">91.5</property>
    </View>
    <View
       id="View3">
@@ -30,9 +35,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">157.19531</property>
+         name="y">91.149414</property>
       <property
-         name="x">158.0</property>
+         name="x">253.5</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -42,7 +47,7 @@
       <property
          name="fromOutcome">showModels</property>
       <property
-         name="sdm:polyPoints">R50,-55.0,156.89648,117.0,156.84473,L50</property>
+         name="sdm:polyPoints">R50,132.5,98.44824,212.5,90.79883,L50</property>
    </ControlFlowCase>
    <View
       id="View5">
@@ -55,9 +60,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">158.59766</property>
+         name="y">91.149414</property>
       <property
-         name="x">361.0</property>
+         name="x">394.5</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -67,7 +72,7 @@
       <property
          name="fromOutcome">showYear</property>
       <property
-         name="sdm:polyPoints">R50,199.0,156.84473,320.0,158.24707,L50</property>
+         name="sdm:polyPoints">R50,294.5,90.79883,353.5,90.79883,L50</property>
    </ControlFlowCase>
    <TaskFlowCall
       id="TaskFlowCall7">
@@ -82,9 +87,9 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">153.59766</property>
+         name="y">91.149414</property>
       <property
-         name="x">556.0</property>
+         name="x">537.3467</property>
    </TaskFlowCall>
    <ControlFlowCase
       islink="true"
@@ -94,6 +99,6 @@
       <property
          name="fromOutcome">showDetails</property>
       <property
-         name="sdm:polyPoints">R50,402.0,158.24707,515.0,153.24707,L50</property>
+         name="sdm:polyPoints">R50,435.5,90.79883,496.34668,90.79883,L50</property>
    </ControlFlowCase>
 </SDM>

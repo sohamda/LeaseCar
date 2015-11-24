@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+/*Panelpage Header*/
+.amx-panelPage-header-appIcon {
+  display: none;
+}
+
+.amx-panelPage-header .amx-outputText,
+.amx-panelPage-footer .amx-outputText {
+  display: block;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: Orange; 
+  white-space: nowrap;
+  outline: 0;
+  padding-top: 13px;
+  text-align: center; 
+}
+
+.adfmf-panelPage-genericAppearance .amx-panelPage-facet-secondary {
+  right: 0;
+  left: 50%;
+}
+
+/* --- <facets> ---*/
+.amx-listView-header,
+.amx-listView-footer {
+  background: none;
+}
+.amx-listView-facet-header > .amx-outputText,
+.amx-listView-facet-footer> .amx-outputText {
+  color: Orange;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; 
+}
+
+.amx-listItem .amx-outputText {
+  color: Blue;
+}
