@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">searchCriteria</property>
+      <property
+         name="page">/carfinder/pages/search.amx</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>searchCriteria&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">200.24707</property>
+      <property
+         name="x">321.0</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="taskFlowId">carfinder-task-flow</property>
+      <property
+         name="activityId">carfinder-task-flow</property>
+      <property
+         name="documentReference">/carfinder/carfinder-task-flow.xml</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>carfinder-task-flow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">202.29883</property>
+      <property
+         name="x">578.0</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">GoSearch</property>
+      <property
+         name="sdm:polyPoints">R50,362.0,199.89648,537.0,201.94824,L50</property>
+   </ControlFlowCase>
+</SDM>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:panelStretchLayout id="psl1" inlineStyle="left:5%; bottom:33%; right:5%; top:33%;">
+      <amx:facet name="center">
+        <amx:panelGroupLayout id="pgl1" layout="vertical" halign="center" valign="middle">
+          <amx:inputText id="it1" hintText="username" inputType="text" showRequired="true"/>
+          <amx:inputText id="it2" hintText="e-mail" inputType="email" showRequired="true"/>
+          <amx:spacer id="s1" height="10"/>
+          <amx:commandButton text="Opslaan" id="cb1" shortDesc="gegevens opslaan"/>
+        </amx:panelGroupLayout>
+      </amx:facet>
+    </amx:panelStretchLayout>
+  </amx:panelPage>
+</amx:view>

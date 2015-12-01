@@ -2,14 +2,17 @@
 <adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
   <adfmf:feature id="carfinder" name="carfinder">
     <adfmf:content id="carfinder.1">
-      <adfmf:amx file="carfinder/carfinder-task-flow.xml#carfinder-task-flow">
-        <adfmf:includes/>
-      </adfmf:amx>
+      <adfmf:amx file="carfinder/search.amx"/>
     </adfmf:content>
   </adfmf:feature>
   <adfmf:feature id="Springboard" name="Springboard">
     <adfmf:content id="SpringBoard01">
       <adfmf:amx file="carfinder/pages/Navigation.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+  <adfmf:feature id="searchCriteria" name="searchCriteria" securityEnabled="false">
+    <adfmf:content id="searchCriteria.1">
+      <adfmf:amx file="carfinder/pages/search.amx"/>
     </adfmf:content>
   </adfmf:feature>
 </adfmf:features>
