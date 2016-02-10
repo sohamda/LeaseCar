@@ -2,9 +2,9 @@
 <adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
                    version="1.0" name="LeaseCar" id="com.company.LeaseCar" appControllerFolder="ApplicationController"
                    listener-class="application.LifeCycleListenerImpl">
-  <adfmf:featureReference refId="searchCriteria" id="fr4" showOnNavigationBar="true" showOnSpringboard="false"/>
-  <adfmf:featureReference refId="carfinder" id="fr1" showOnSpringboard="false" showOnNavigationBar="true"/>
-  <adfmf:featureReference id="fr2" showOnNavigationBar="false" showOnSpringboard="false" refId="Springboard"/>
+  <adfmf:featureReference refId="searchCriteria" id="fr4"/>
+  <adfmf:featureReference refId="carfinder" id="fr1"/>
+  <adfmf:featureReference id="fr2" showOnNavigationBar="false" refId="Springboard" showOnSpringboard="false"/>
   <adfmf:preferences/>
   <adfmf:navigation>
     <adfmf:navigationBar enabled="false" displayHideShowNavigationBarControl="false"/>
@@ -16,5 +16,8 @@
   <adfmf:login defaultConnRefId="LeaseCar"/>
   <adfmf:remoteURLWhiteList>
     <adfmf:domain id="d1">http://media.ed.edmunds-media.com</adfmf:domain>
+    <adfmf:domain id="d2">http://code.jquery.com</adfmf:domain>
+    <adfmf:domain id="d3">http://www.w3.org</adfmf:domain>
+    <adfmf:domain id="d4">http://code.jquery.com/mobile/1.4.5</adfmf:domain>
   </adfmf:remoteURLWhiteList>
 </adfmf:application>

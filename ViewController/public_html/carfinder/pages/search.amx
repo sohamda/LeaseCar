@@ -7,54 +7,67 @@
     </amx:facet>
     <amx:facet name="primary">
       <amx:commandLink actionListener="#{bindings.toggleSpringboard.execute}" id="cl1">
-        <amx:image inlineStyle="width:32px;height:32px" source="/images/springboard.png" id="i1"/>/>
+        <amx:image inlineStyle="width:32px;height:32px" source="/images/springboard.png" id="i1"/>
       </amx:commandLink>
     </amx:facet>
-    <amx:panelStretchLayout id="psl1">
-      <amx:facet name="center">
-        <amx:panelFormLayout id="pfl1">
-          <amx:inputText label="Grade" id="it3"/>
-          <amx:inputText label="Salaris" id="it2"/>
-          <amx:inputNumberSlider label="Bijtelling" id="ins1" minimum="0" maximum="25"/>
-          <amx:inputText label="Leasebudget" id="it1" inlineStyle="font-size:large; alignment-adjust:middle;"/>
-          <amx:selectOneChoice label="Merk" id="smc2">
-            <amx:selectItem id="si9"/>
-            <amx:selectItem label="Audi" id="si10"/>
-            <amx:selectItem label="Alfa Romeo" id="si11"/>
-            <amx:selectItem label="Skoda" id="si12"/>
-            <amx:selectItem label="Volkswagen" id="si13"/>
-          </amx:selectOneChoice>
-          <amx:inputNumberSlider label="Budget" id="ins2" minimum="500" maximum="1500"/>
-          <amx:selectOneChoice label="Brandstof" id="smc1">
-            <amx:selectItem id="si1" label="Benzine" value="benzine"/>
-            <amx:selectItem label="Diesel" id="si2" value="diesel"/>
-            <amx:selectItem label="Aardgas" id="si5" value="aardgas"/>
-            <amx:selectItem label="LPG" id="si3" value="lpg"/>
-            <amx:selectItem label="Elektrisch" id="si4" value="electrisch"/>
-          </amx:selectOneChoice>
-          <amx:selectOneChoice label="Type" id="smc3">
-            <amx:selectItem label="Coupé" id="si15"/>
-            <amx:selectItem label="Hatchback" id="si16"/>
-            <amx:selectItem label="Sedan" id="si17"/>
-            <amx:selectItem label="Station" id="si18"/>
-            <amx:selectItem label="Cabriolet" id="si19"/>
-            <amx:selectItem label="MPV" id="si20"/>
-            <amx:selectItem label="SUV" id="si21"/>
-            <amx:selectItem label="Bus" id="si22"/>
-            <amx:selectItem label="Pick-up" id="si23"/>
-          </amx:selectOneChoice>
-          <amx:selectOneButton id="sob1" simple="true" shortDesc="Transmissie"
-                               inlineStyle="position:center; padding-right:5px;"
-                               layout="horizontal">
-            <amx:selectItem label="Geen voorkeur" id="si8"/>
-            <amx:selectItem id="si6" label="Automaat" value="automaat"/>
-            <amx:selectItem label="Handgeschakeld" id="si7" value="handgeschakeld"/>
-          </amx:selectOneButton>
-        </amx:panelFormLayout>
-        <amx:panelGroupLayout id="pgl1">
-          <amx:commandButton text="Zoeken" id="cb1" action="GoSearch" shortDesc="Zoeken"/>
-        </amx:panelGroupLayout>
-      </amx:facet>
-    </amx:panelStretchLayout>
+    <amx:panelFormLayout id="pfl1">
+        <amx:inputText label="Grade" id="it3"/>
+        <amx:inputText label="Salaris" id="it2"/>
+        <amx:inputText label="Leasebudget" id="it1" inlineStyle="font-size:large; alignment-adjust:middle;"/>
+    </amx:panelFormLayout>
+    <amx:verbatim id="v4">
+     <![CDATA[
+          <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+          <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+          <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <div data-role="rangeslider" data-mini="true">
+            <label for="range-1a">Bijtelling</label>
+            <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="10">
+            <label for="range-1b">Bijtelling</label>
+            <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="30">
+        </div>
+        <div data-role="rangeslider" data-mini="true">
+            <label for="range-2a">Budget</label>
+            <input type="range" name="range-2a" id="range-2a" min="4000" max="50000" value="8000">
+            <label for="range-2b">Budget</label>
+            <input type="range" name="range-2b" id="range-2b" min="4000" max="50000" value="15000">
+        </div>
+     ]]>
+    </amx:verbatim>
+    <amx:panelFormLayout id="pfl2">
+      <amx:selectOneChoice label="Merk" id="smc2">
+        <amx:selectItem id="si9"/>
+        <amx:selectItem label="Audi" id="si10"/>
+        <amx:selectItem label="Alfa Romeo" id="si11"/>
+        <amx:selectItem label="Skoda" id="si12"/>
+        <amx:selectItem label="Volkswagen" id="si13"/>
+      </amx:selectOneChoice>
+      <amx:selectOneChoice label="Brandstof" id="smc1">
+        <amx:selectItem id="si1" label="Benzine" value="benzine"/>
+        <amx:selectItem label="Diesel" id="si2" value="diesel"/>
+        <amx:selectItem label="Aardgas" id="si5" value="aardgas"/>
+        <amx:selectItem label="LPG" id="si3" value="lpg"/>
+        <amx:selectItem label="Elektrisch" id="si4" value="electrisch"/>
+      </amx:selectOneChoice>
+      <amx:selectOneChoice label="Type" id="smc3">
+        <amx:selectItem label="Coupé" id="si15"/>
+        <amx:selectItem label="Hatchback" id="si16"/>
+        <amx:selectItem label="Sedan" id="si17"/>
+        <amx:selectItem label="Station" id="si18"/>
+        <amx:selectItem label="Cabriolet" id="si19"/>
+        <amx:selectItem label="MPV" id="si20"/>
+        <amx:selectItem label="SUV" id="si21"/>
+        <amx:selectItem label="Bus" id="si22"/>
+        <amx:selectItem label="Pick-up" id="si23"/>
+      </amx:selectOneChoice>
+      </amx:panelFormLayout>
+      <amx:panelFormLayout id="pfl3">
+      <amx:selectOneChoice label="Transmissie" id="smc4">
+        <amx:selectItem label="Geen voorkeur" id="si8"/>
+        <amx:selectItem id="si6" label="Automaat" value="automaat"/>
+        <amx:selectItem label="Handgeschakeld" id="si7" value="handgeschakeld"/>
+      </amx:selectOneChoice>
+    </amx:panelFormLayout>
+    <amx:commandButton text="Zoeken" id="cb1" action="GoSearch" shortDesc="Zoeken"/>
   </amx:panelPage>
 </amx:view>

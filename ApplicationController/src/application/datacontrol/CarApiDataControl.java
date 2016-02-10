@@ -44,7 +44,6 @@ public class CarApiDataControl {
 
     public Make[] getMakes() {
         if(makes==null) {
-            System.out.println("makes are empty ");
             allMakes();
         }
         return makes;
@@ -120,6 +119,7 @@ public class CarApiDataControl {
         providerChangeSupport.fireProviderRefresh("styles");
     }
     
+    // Call : https://api.edmunds.com/v1/api/vehiclephoto/service/findphotosbystyleid?fmt=json&styleId={styleID}
     public void retrievePhotos(String styleId) {
         
         RESTCallerUtil restCallerUtil = new RESTCallerUtil();
@@ -133,6 +133,7 @@ public class CarApiDataControl {
                 JSONArray photoSrcs = (JSONArray) result.get("photoSrcs");
                 for(int j = 0; j < photoSrcs.length(); j++) {
                     String photoSrc = (String) photoSrcs.get(j);
+                    // pick up only 815 pixel photos 
                     if(photoSrc.endsWith("815.jpg")) {
                         photosWithCompleteURL.add(PHOTO_URL + photoSrc);
                     }
@@ -144,7 +145,6 @@ public class CarApiDataControl {
         
         if(!photosWithCompleteURL.isEmpty()) {  
             setPhotoSrc(photosWithCompleteURL.toArray(new String[photosWithCompleteURL.size()]));
-            System.out.println("Photos :" + photoSrc[3]);
         }
         
         providerChangeSupport.fireProviderRefresh("photoSrc");

@@ -55,7 +55,6 @@ public class RESTCallerUtil {
             response = restServiceAdapter.send(restPayload);
         } catch (Exception e) {
             //log error
-            System.out.println("exception " + e.getMessage());
             Trace.log("REST_JSON",Level.SEVERE, this.getClass(),"invokeRestRequest", "Invoke of REST Resource failed for "+httpMethod+" to "+requestURI);
             Trace.log("REST_JSON",Level.SEVERE, this.getClass(),"invokeRestRequest", e.getLocalizedMessage());
         }
